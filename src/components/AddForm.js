@@ -27,6 +27,12 @@ const AddForm = (props) => {
             props.addError("All fields are required.");
         } else {
             props.addSmurf(state);
+            setState({
+                name: "",
+                position: "",
+                nickname: "",
+                description: ""
+            });
         }
     }
 
@@ -52,7 +58,7 @@ const AddForm = (props) => {
             {
                 props.error && <div data-testid="errorAlert" className="alert alert-danger" role="alert">Error: {props.error}</div>
             }
-            <button>Submit Smurf</button>
+            <button> Submit Smurf </button>
         </form>
     </section>);
 }

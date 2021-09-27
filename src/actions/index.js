@@ -17,8 +17,7 @@ export const fetchSmurfs = (newSmurfFromInput) => dispatch => {
     dispatch({ type: FETCH_SMURFS_LOADING })
     axios.get('http://localhost:3333/smurfs')
         .then(res => {
-            console.log(res.data);
-            // save res.data to state? in reducer right?
+            console.log("get request", res.data);
             dispatch({
                 type: FETCH_SMURFS_SUCCESS,
                 payload: res.data.results,

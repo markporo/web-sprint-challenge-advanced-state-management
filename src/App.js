@@ -11,11 +11,11 @@ import { connect } from 'react-redux'
 import { fetchSmurfs } from "./actions"
 
 class App extends Component {
-  state = {
-    smurfs: fetchSmurfs(),
-    isLoading: "",
-    error: "",
-  }
+  // state = {
+  //   smurfs: fetchSmurfs(),
+  //   isLoading: "",
+  //   error: "",
+  // }
 
   componentDidMount() {
     // call fetchSmurfs when app first loads
@@ -35,16 +35,16 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    smurfs: state.smurfs,
-    isLoading: state.isLoading,
-    error: state.error
-  };
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     smurfs: state.smurfs,
+//     isLoading: state.isLoading,
+//     error: state.error
+//   };
+// }
 
 
-export default connect(mapStateToProps, { fetchSmurfs })(App);
+export default connect(null, { fetchSmurfs })(App);
 
 //Task List:
 //1. Connect the fetchSmurfs actions to the App component.
